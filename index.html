@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>EduGabon — Tableau de bord</title>
+  <link rel="manifest" href="/manifest.json">
+  <link rel="stylesheet" href="styles.css">
+  <meta name="theme-color" content="#1565c0"/>
+</head>
+<body>
+  <header class="topbar">
+    <div class="logo">EduGabon</div>
+    <button id="btnAdd" class="btn" hidden>Installer</button>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <h2>Connexion</h2>
+      <input id="email" placeholder="Email" />
+      <input id="password" placeholder="Mot de passe" type="password" />
+      <button id="loginBtn" class="btn">Se connecter (test)</button>
+      <p id="loginMsg" class="muted">Utilise admin@edugabon.test / admin123</p>
+    </section>
+
+    <section id="dashboard" class="hidden">
+      <h2>Tableau de bord (Parent)</h2>
+      <div class="grid">
+        <div class="tile">
+          <h3>Notes récentes</h3>
+          <ul id="gradesList"></ul>
+        </div>
+        <div class="tile">
+          <h3>Absences cette semaine</h3>
+          <ul id="attList"></ul>
+        </div>
+        <div class="tile">
+          <h3>Messages</h3>
+          <ul id="msgList"></ul>
+        </div>
+      </div>
+      <button id="logoutBtn" class="btn secondary">Se déconnecter</button>
+    </section>
+  </main>
+
+  <footer class="footer">© EduGabon — Prototype gratuit</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
